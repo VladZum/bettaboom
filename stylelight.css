@@ -274,23 +274,32 @@ footer {
 /* Estilos del carrusel */
 .productos-swiper {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    align-items: center;
 }
 
 .swiper-slide {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 .producto {
     background: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
+    width: calc(100% - 30px);
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 .producto:hover {
@@ -320,10 +329,15 @@ footer {
     }
 
     .productos-swiper {
-        padding: 10px;
+        padding: 10px 0;
     }
 
     .producto {
-        max-width: 100%;
+        max-width: 260px;
+        padding: 12px;
+    }
+
+    .producto img {
+        height: 180px;
     }
 }

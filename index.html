@@ -107,8 +107,9 @@
     <script>
         const swiper = new Swiper('.productos-swiper', {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 20,
             loop: true,
+            centeredSlides: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -124,9 +125,21 @@
             breakpoints: {
                 768: {
                     slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 3,
+                    centeredSlides: false,
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                beforeInit: function () {
+                    this.el.style.visibility = 'hidden';
+                },
+                init: function () {
+                    this.el.style.visibility = 'visible';
                 }
             }
         });
